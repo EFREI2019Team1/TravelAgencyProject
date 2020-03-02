@@ -1,0 +1,40 @@
+日数、ターゲット、旅程、概要
+場所、観光にかかる時間、巡回テーマ
+
+1day
+
+
+2days
+
+3days
+
+1week
+
+
+place to visit
+バッキンガム宮殿（Buckingham Palace）
+    衛兵交替式
+    ホースガーズ
+    グリーンパーク
+ロンドン塔（Tower of London）
+    世界遺産
+タワーブリッジ（Tower Bridge）
+    1894築
+ウェストミンスター寺院（Westminster Abbey）
+    世界遺産
+ビッグ・ベン（Big Ben）
+    時計
+サウスバンク・センター（Southbank Centre）
+    芸術複合施設
+ロンドン・アイ（London Eye）
+    観覧車
+ザ・シャード（The Shard）
+    ヨーロッパで一番の高層ビル
+アレクサンドラ・パレス（Alexandra Palace）
+    イベント開催地
+キングス・クロス・セント・パンクラス駅（King's Cross St. Pancras tube station）
+    ハリーポッターにも登場
+ポートベローマーケット（Portobello Road Market）
+    骨董品市場
+バラマーケット（Borough Market）
+    オーガニックフードマーケット
