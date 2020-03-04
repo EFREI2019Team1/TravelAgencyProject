@@ -20,19 +20,23 @@
 
 /* --- 段差で背景画像のアニメーションを実行 ----------------- */
 .box .src1 {
-  background-image : url(./spring.jpg);   /* 背景の画像を指定 */
+  background-image : url(./UI/img/bigben.jpg);   /* 背景の画像を指定 */
 }
 .box .src2 {
-  background-image : url(./summer.jpg);   /* 背景の画像を指定 */
+  background-image : url(./UI/img/bridge.jpg);   /* 背景の画像を指定 */
   animation-delay  : 5s;
 }
 .box .src3 {
-  background-image : url(./autumn.jpg);   /* 背景の画像を指定 */
+  background-image : url(./UI/img/buckingham.jpg);   /* 背景の画像を指定 */
   animation-delay  : 10s;
 }
 .box .src4 {
-  background-image : url(./winter.jpg);   /* 背景の画像を指定 */
+  background-image : url(./UI/img/tower_bridge.jpg);   /* 背景の画像を指定 */
   animation-delay  : 15s;
+}
+.box .src4 {
+  background-image : url(./UI/img/westminster.jpg);   /* 背景の画像を指定 */
+  animation-delay  : 20s;
 }
 
 @keyframes bgAnime {
