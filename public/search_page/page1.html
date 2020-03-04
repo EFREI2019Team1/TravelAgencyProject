@@ -2,28 +2,49 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search</title>
 
-  <!-- call jquery frame -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- update the version number as needed -->
-  <script defer src="/__/firebase/7.9.3/firebase-app.js"></script>
-  <!-- include only the Firebase features as you need -->
-  <script defer src="/__/firebase/7.9.3/firebase-auth.js"></script>
-  <script defer src="/__/firebase/7.9.3/firebase-database.js"></script>
-  <script defer src="/__/firebase/7.9.3/firebase-messaging.js"></script>
-  <script defer src="/__/firebase/7.9.3/firebase-storage.js"></script>
-  <!-- initialize the SDK after all desired features are loaded -->
-  <script defer src="/__/firebase/init.js"></script>
+    <!-- call jquery frame -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.9.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.9.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.9.3/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.9.3/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.9.3/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
 
-  <link rel="stylesheet" href="title-style.css"></link>
-  <script type="text/javascript" src="note_title.js"></script>
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <script type="text/javascript" src="database_operation.js"></script>
 </head>
 
 <body>
-    Search
+    <div id="courses">
+        <ul id="courseList">
+            <li>
+                <div id="courseId" class="course">
+                    <ul>
+                        <li> <label class="course_name" name="name">aaa</label></li>
+                        <li> <label class="course_day" name="day">1day</label></li>
+                        <li> <label class="course_target" name="target">family oldpeople</label></li>
+                        <li> <label class="course_money" name="money">100euro</li>
+                    </ul>
+                    <img class="course_image" src="tmpUIFile/Heart.png" alt="imageNotFound">
+                    <div class="course_content" id="courseID-content">
+                        <ul>
+                            <li>tag1</li>
+                            <li>tag2</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </body>
 
 </html>
