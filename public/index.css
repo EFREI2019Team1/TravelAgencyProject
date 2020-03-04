@@ -21,7 +21,7 @@ ul {
 }
 li {
 	float: right;
-    border-right: 1px solid #bbbbbb;
+    border-left: 1px solid #bbbbbb;
 }
 li:last-child {
 	border-right: none;
@@ -30,16 +30,18 @@ li a {
 	display: block;
 	color: white;
 	text-align: center;
-	padding: 30px 50px;
+	padding: 15px 50px;
     text-decoration: none;
     font-size: 20px;
 }
 li a:hover:not(.active) {
 	background-color: #a9bce2;
 }
+/*
 .active {
     background-color: #da3c41;
 }
+*/
 .menu {
     z-index: 2;
     position: relative;
