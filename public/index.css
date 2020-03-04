@@ -38,7 +38,7 @@ li a:hover:not(.active) {
 	background-color: #a9bce2;
 }
 .active {
-	background-color: #da3c41;
+    background-color: #da3c41;
 }
 .menu {
     z-index: 2;
