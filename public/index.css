@@ -1,10 +1,51 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 /* --- 全体のBOX定義 ---------------------------------------- */
 .box {
   position   : relative;
-  max-width  : 400px;
-  height     : 250px;
+  width: 100vw;
+  height: 100vh;
   margin     : auto;
   overflow   : hidden;
+}
+
+/* --- メニューバーの定義 ------------------------------------ */
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+li {
+	float: right;
+    border-right: 1px solid #bbbbbb;
+}
+li:last-child {
+	border-right: none;
+}
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 30px 50px;
+    text-decoration: none;
+    font-size: 20px;
+}
+li a:hover:not(.active) {
+	background-color: #a9bce2;
+}
+.active {
+	background-color: #da3c41;
+}
+.menu {
+    z-index: 2;
+    position: relative;
+}
+a {
+    text-shadow:0 0 10px #000;
 }
 
 /* --- 背景の指定 ------------------------------------------- */
@@ -16,25 +57,27 @@
   right      : 0;
   opacity    : 0;
   animation  : bgAnime 20s infinite;   /* 4画像 × 各5s = 20s */
+  background-size: cover;
+  z-index: 1;
 }
 
 /* --- 段差で背景画像のアニメーションを実行 ----------------- */
-.box .src1 {
+.box .image1 {
   background-image : url(./UI/img/bigben.jpg);   /* 背景の画像を指定 */
 }
-.box .src2 {
+.box .image2 {
   background-image : url(./UI/img/bridge.jpg);   /* 背景の画像を指定 */
   animation-delay  : 5s;
 }
-.box .src3 {
+.box .image3 {
   background-image : url(./UI/img/buckingham.jpg);   /* 背景の画像を指定 */
   animation-delay  : 10s;
 }
-.box .src4 {
+.box .image4 {
   background-image : url(./UI/img/tower_bridge.jpg);   /* 背景の画像を指定 */
   animation-delay  : 15s;
 }
-.box .src4 {
+.box .image5 {
   background-image : url(./UI/img/westminster.jpg);   /* 背景の画像を指定 */
   animation-delay  : 20s;
 }
