@@ -1,0 +1,44 @@
+/* --- 全体のBOX定義 ---------------------------------------- */
+.box {
+  position   : relative;
+  max-width  : 400px;
+  height     : 250px;
+  margin     : auto;
+  overflow   : hidden;
+}
+
+/* --- 背景の指定 ------------------------------------------- */
+.box .bgImg {
+  position   : absolute;
+  top        : 0;
+  left       : 0;
+  bottom     : 0;
+  right      : 0;
+  opacity    : 0;
+  animation  : bgAnime 20s infinite;   /* 4画像 × 各5s = 20s */
+}
+
+/* --- 段差で背景画像のアニメーションを実行 ----------------- */
+.box .src1 {
+  background-image : url(./spring.jpg);   /* 背景の画像を指定 */
+}
+.box .src2 {
+  background-image : url(./summer.jpg);   /* 背景の画像を指定 */
+  animation-delay  : 5s;
+}
+.box .src3 {
+  background-image : url(./autumn.jpg);   /* 背景の画像を指定 */
+  animation-delay  : 10s;
+}
+.box .src4 {
+  background-image : url(./winter.jpg);   /* 背景の画像を指定 */
+  animation-delay  : 15s;
+}
+
+@keyframes bgAnime {
+   0% { opacity: 0; }
+   5% { opacity: 1; }
+  25% { opacity: 1; }
+  30% { opacity: 0; }
+ 100% { opacity: 0; }
+}
