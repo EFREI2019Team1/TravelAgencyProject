@@ -95,6 +95,10 @@ a {
     margin-right : 10px;
     margin-left: 3px;
 }
+.search_button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
 
 /* --- 背景の指定 ------------------------------------------- */
 .box .bgImg {
