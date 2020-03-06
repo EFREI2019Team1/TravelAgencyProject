@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home</title>
   <link rel="stylesheet" href="index.css"></link>
-  <script type="text/javascript" src="note_title.js"></script>
+  <script type="text/javascript" src="index.js"></script>
 </head>
 
 <body>
@@ -19,10 +19,10 @@
           <li><a href="home.html">ホーム</a></li>
       </ul>
     </div>
-    <div class="question_form">
+    <div class="question_form_wrapper">
       <div class="question_text">
         <p><a class="question_title">あなたにピッタリなコースを<br>見つけましょう</a></p>
-        <form action="#" method="POST">
+        <form class="question_form" action="#" method="POST">
           <p><a class="form_title">日数</a><br>
           <input type="radio" name="date" value="2"><span class="form_factor">2日間</span>
           <input type="radio" name="date" value="3"><span class="form_factor">3日間</span>
@@ -49,7 +49,7 @@
           <input type="checkbox" name="content" value="11"><span class="form_factor">ロケ地</span></p>
         </form>
         <div class="button_wrapper">
-          <button class=search_button type="button" name="name" value="value">コースを検索</button>
+          <button class=search_button type="button" name="name" value="value" onclick="OnSearchButtonClicked();">コースを検索</button>
         </div>
       </div>
     </div>

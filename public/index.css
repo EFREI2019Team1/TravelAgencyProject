@@ -50,7 +50,7 @@ a {
     text-shadow:0 0 10px #000;
 }
 
-.question_form {
+.question_form_wrapper {
     margin-top: 80px;
     margin-left: 100px;
     padding: 1%;
