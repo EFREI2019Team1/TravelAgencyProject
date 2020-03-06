@@ -24,9 +24,45 @@
 </head>
 
 <body>
+    <div id="searchform">
+        <div id="searchform_day">
+            <input type="radio" id="search_day_0" name="search_day" value="2" checked>
+            <label for="search_day_0">2day</label>
+            <input type="radio" id="search_day_1" name="search_day" value="3">
+            <label for="search_day_1">3day</label>
+            <input type="radio" id="search_day_2" name="search_day" value="7">
+            <label for="search_day_2">1week</label>
+        </div>
+        <div id="searchform_target">
+            <input type="radio" id="search_target_0" name="search_target" value="family" checked>
+            <label for="search_target_0">family</label>
+            <input type="radio" id="search_target_1" name="search_target" value="couple">
+            <label for="search_target_1">couple</label>
+            <input type="radio" id="search_target_2" name="search_target" value="young people">
+            <label for="search_target_2">young people</label>
+            <input type="radio" id="search_target_2" name="search_target" value="old people">
+            <label for="search_target_2">old people</label>
+        </div>
+        <div id="searchform_budget">
+            <label>minimum budget</label>
+            <input type="number" name="number1" min="0" id="min_budget" required>
+            <br>
+            <label>maxmum budget</label>
+            <input type="number" name="number2" min="0" id="max_budget" required>
+        </div>
+        <div id="searchform_tag">
+            <ol id="searchTagList">
+                <li><input type="checkbox" name="searchtag" value="kyoto" data-tagname="a">Kyoto</li>
+                <li><input type="checkbox" name="searchtag" value="aichi" data-tagname="b">Aichi</li>
+                <li><input type="checkbox" name="searchtag" value="osaka" data-tagname="c">Osaka</li>
+            </ol>
+        </div>
+        <input type="button" id="debugbtn" value="search">
+    </div>
+
     <div id="courses">
         <ul id="courseList">
-            <li>
+            <li hidden>
                 <div id="courseId" class="course">
                     <ul>
                         <li> <label class="course_name" name="name">aaa</label></li>
