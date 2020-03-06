@@ -1,0 +1,144 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* --- 全体のBOX定義 ---------------------------------------- */
+.box {
+  position   : relative;
+  width: 100vw;
+  height: 100vh;
+  margin     : auto;
+  overflow   : hidden;
+}
+
+/* --- メニューバーの定義 ------------------------------------ */
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+li {
+	float: right;
+    border-left: 1px solid #bbbbbb;
+}
+li:last-child {
+	border-right: none;
+}
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 15px 50px;
+    text-decoration: none;
+    font-size: 20px;
+}
+li a:hover:not(.active) {
+	background-color: #a9bce2;
+}
+/*
+.active {
+    background-color: #da3c41;
+}
+*/
+.menu {
+    z-index: 2;
+    position: relative;
+}
+a {
+    text-shadow:0 0 10px #000;
+}
+
+.question_form_wrapper {
+    margin-top: 80px;
+    margin-left: 100px;
+    padding: 1%;
+    width: fit-content;
+    height: fit-content;
+    background-color: #ffffffc7;
+    position: relative;
+    z-index: 3;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.question_title {
+    color: #000000;
+    text-shadow: none;
+    font-size: 30px;
+    font-weight: 900;
+}
+.button_wrapper {
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 4;
+}
+.search_button {
+    background-color: #ffffff00;
+    opacity: 1;
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border: solid 3px #000000;
+}
+.form_title {
+    font-weight: 600;
+    font-size: 20px;
+    text-shadow: none;
+}
+.form_factor {
+    margin-right : 10px;
+    margin-left: 3px;
+}
+.search_button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* --- 背景の指定 ------------------------------------------- */
+.box .bgImg {
+  position   : absolute;
+  top        : 0;
+  left       : 0;
+  bottom     : 0;
+  right      : 0;
+  opacity    : 0;
+  animation  : bgAnime 20s infinite;   /* 4画像 × 各5s = 20s */
+  background-size: cover;
+  z-index: 1;
+}
+
+/* --- 段差で背景画像のアニメーションを実行 ----------------- */
+.box .image1 {
+  background-image : url(./UI/img/bigben.jpg);   /* 背景の画像を指定 */
+}
+.box .image2 {
+  background-image : url(./UI/img/bridge.jpg);   /* 背景の画像を指定 */
+  animation-delay  : 5s;
+}
+.box .image3 {
+  background-image : url(./UI/img/buckingham.jpg);   /* 背景の画像を指定 */
+  animation-delay  : 10s;
+}
+.box .image4 {
+  background-image : url(./UI/img/tower_bridge.jpg);   /* 背景の画像を指定 */
+  animation-delay  : 15s;
+}
+.box .image5 {
+  background-image : url(./UI/img/westminster.jpg);   /* 背景の画像を指定 */
+  animation-delay  : 20s;
+}
+
+@keyframes bgAnime {
+   0% { opacity: 0; }
+   5% { opacity: 1; }
+  25% { opacity: 1; }
+  30% { opacity: 0; }
+ 100% { opacity: 0; }
+}
