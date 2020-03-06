@@ -55,11 +55,12 @@ a {
     margin-left: 100px;
     padding: 1%;
     width: fit-content;
-    height: 500px;
+    height: fit-content;
     background-color: #ffffffc7;
     position: relative;
     z-index: 3;
     border-radius: 5px;
+    text-align: center;
 }
 
 .question_title {
@@ -84,6 +85,15 @@ a {
     padding-right: 5%;
     padding-top: 2%;
     padding-bottom: 2%;
+}
+.form_title {
+    font-weight: 600;
+    font-size: 20px;
+    text-shadow: none;
+}
+.form_factor {
+    margin-right : 10px;
+    margin-left: 3px;
 }
 
 /* --- 背景の指定 ------------------------------------------- */
