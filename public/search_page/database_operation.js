@@ -1,5 +1,4 @@
 'use strict';
-
 $(function () {
     let courses = new Array();
     let course1 = new Course("course1", 2, "family", "tmpUIFile/Heart.png", null, 10000, ["kyoto", "hoge2", "hoge3"]);
@@ -11,7 +10,11 @@ $(function () {
     courses.forEach(course => {
         addCourseToHTML(course);
     })
-    $("#debugbtn").click(() => {
+    let bool = false;
+    $("#search_button").click(() => {
+        if(!bool){
+            location.href = "search_page/page1.html"
+        }
         let matchedCourse = search();
         let message = "Search result matched course is "+matchedCourse.length+"\n";
         Object.keys(matchedCourse).forEach(function(course){
@@ -125,6 +128,7 @@ function makeCourseNesting(course) {
 }
 //コースの要素をhtmlに挿入
 function addCourseToHTML(course) {
+    console.log("aaa");
     let li = $("<li>").append(makeCourseNesting(course));
     $("#courseList").append(li);
 }

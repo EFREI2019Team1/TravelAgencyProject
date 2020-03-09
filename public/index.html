@@ -8,18 +8,20 @@
 
   <!-- call jquery frame -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <link rel="stylesheet" href="index.css"></link>
+  <link rel="stylesheet" href="index.css">
+  </link>
   <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="search_page/database_operation.js"></script>
 </head>
 
 <body>
   <div class="box">
     <div class="menu">
       <ul>
-          <li><a href="info.html">航空券予約</a></li>
-          <li><a href="contact.html">コンタクト</a></li>
-          <li><a href="character.html">コース一覧</a></li>
-          <li><a href="home.html">ホーム</a></li>
+        <li><a href="info.html">航空券予約</a></li>
+        <li><a href="contact.html">コンタクト</a></li>
+        <li><a href="character.html">コース一覧</a></li>
+        <li><a href="home.html">ホーム</a></li>
       </ul>
     </div>
     <div class="question_form_wrapper">
@@ -27,32 +29,69 @@
         <p><a class="question_title">あなたにピッタリなコースを<br>見つけましょう</a></p>
         <form class="question_form" action="#" method="POST">
           <p><a class="form_title">日数</a><br>
-          <input type="radio" name="date" value="2"><span class="form_factor">2日間</span>
-          <input type="radio" name="date" value="3"><span class="form_factor">3日間</span>
-          <input type="radio" name="date" value="7"><span class="form_factor">7日間</span></p>
+            <!--
+            <input type="radio" name="date" value="2"><span class="form_factor">2日間</span>
+            <input type="radio" name="date" value="3"><span class="form_factor">3日間</span>
+            <input type="radio" name="date" value="7"><span class="form_factor">7日間</span>
+            -->
+            <div id="searchform_day">
+              <input type="radio" id="search_day_0" name="search_day" value="2" checked>
+              <label for="search_day_0">2day</label>
+              <input type="radio" id="search_day_1" name="search_day" value="3">
+              <label for="search_day_1">3day</label>
+              <input type="radio" id="search_day_2" name="search_day" value="7">
+              <label for="search_day_2">1week</label>
+            </div>
+          </p>
+
           <br>
           <p><a class="form_title">グループ</a><br>
-          <input type="radio" name="target" value="0"><span class="form_factor">家族</span>
-          <input type="radio" name="target" value="1"><span class="form_factor">カップル</span>
-          <input type="radio" name="target" value="2"><span class="form_factor">若者</span>
-          <input type="radio" name="target" value="3"><span class="form_factor">大人</span></p>
+            <!--
+            <input type="radio" name="target" value="0"><span class="form_factor">家族</span>
+            <input type="radio" name="target" value="1"><span class="form_factor">カップル</span>
+            <input type="radio" name="target" value="2"><span class="form_factor">若者</span>
+            <input type="radio" name="target" value="3"><span class="form_factor">大人</span>
+            -->
+            <div id="searchform_target">
+              <input type="radio" id="search_target_0" name="search_target" value="family" checked>
+              <label for="search_target_0">family</label>
+              <input type="radio" id="search_target_1" name="search_target" value="couple">
+              <label for="search_target_1">couple</label>
+              <input type="radio" id="search_target_2" name="search_target" value="young people">
+              <label for="search_target_2">young people</label>
+              <input type="radio" id="search_target_2" name="search_target" value="old people">
+              <label for="search_target_2">old people</label>
+            </div>
+          </p>
           <br>
-          <p><a class="form_title">コンテンツ</a><br>
-          <input type="checkbox" name="content" value="0"><span class="form_factor">世界遺産</span>
-          <input type="checkbox" name="content" value="1"><span class="form_factor">ショッピング</span>
-          <input type="checkbox" name="content" value="2"><span class="form_factor">イベント</span>
-          <input type="checkbox" name="content" value="3"><span class="form_factor">ファッション</span><br>
-          <input type="checkbox" name="content" value="4"><span class="form_factor">ミュージアム</span>
-          <input type="checkbox" name="content" value="5"><span class="form_factor">シンボル</span>
-          <input type="checkbox" name="content" value="6"><span class="form_factor">ティータイム</span>
-          <input type="checkbox" name="content" value="7"><span class="form_factor">公園</span><br>
-          <input type="checkbox" name="content" value="8"><span class="form_factor">ショー</span>
-          <input type="checkbox" name="content" value="9"><span class="form_factor">歴史的価値</span>
-          <input type="checkbox" name="content" value="10"><span class="form_factor">インスタ映え</span>
-          <input type="checkbox" name="content" value="11"><span class="form_factor">ロケ地</span></p>
+          <p>
+            <a class="form_title">コンテンツ</a><br>
+            <!--
+            <input type="checkbox" name="content" value="0"><span class="form_factor">世界遺産</span>
+            <input type="checkbox" name="content" value="1"><span class="form_factor">ショッピング</span>
+            <input type="checkbox" name="content" value="2"><span class="form_factor">イベント</span>
+            <input type="checkbox" name="content" value="3"><span class="form_factor">ファッション</span><br>
+            <input type="checkbox" name="content" value="4"><span class="form_factor">ミュージアム</span>
+            <input type="checkbox" name="content" value="5"><span class="form_factor">シンボル</span>
+            <input type="checkbox" name="content" value="6"><span class="form_factor">ティータイム</span>
+            <input type="checkbox" name="content" value="7"><span class="form_factor">公園</span><br>
+            <input type="checkbox" name="content" value="8"><span class="form_factor">ショー</span>
+            <input type="checkbox" name="content" value="9"><span class="form_factor">歴史的価値</span>
+            <input type="checkbox" name="content" value="10"><span class="form_factor">インスタ映え</span>
+            <input type="checkbox" name="content" value="11"><span class="form_factor">ロケ地</span>
+            -->
+            <div id="searchform_tag">
+              <input type="checkbox" id="search_tag_0" name="searchtag" value="kyoto" data-tagname="a"></input>
+              <label for="search_tag_0">Kyoto</label>
+              <input type="checkbox" id="search_tag_1" name="searchtag" value="aichi" data-tagname="b"></input>
+              <label for="search_tag_1">Aichi</label>
+              <input type="checkbox" id="search_tag_2" name="searchtag" value="osaka" data-tagname="c"></input>
+              <label for="search_tag_2">Osaka</label>
+            </div>
+          </p>
         </form>
         <div class="button_wrapper">
-          <button class=search_button type="button" name="name" value="value" onclick="OnSearchButtonClicked();">コースを検索</button>
+          <button class=search_button id="search_button" type="button" value="search">コースを検索</button>
         </div>
       </div>
     </div>

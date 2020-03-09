@@ -2,85 +2,83 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Search</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search</title>
 
-    <!-- call jquery frame -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.9.3/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.9.3/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.9.3/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.9.3/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.9.3/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+  <!-- call jquery frame -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/7.9.3/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/7.9.3/firebase-auth.js"></script>
+  <script defer src="/__/firebase/7.9.3/firebase-database.js"></script>
+  <script defer src="/__/firebase/7.9.3/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/7.9.3/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
 
-    <link rel="stylesheet" href="style.css">
-    </link>
-    <script type="text/javascript" src="database_operation.js"></script>
+  <link rel="stylesheet" href="style.css">
+  </link>
+  <script type="text/javascript" src="database_operation.js"></script>
 </head>
 
 <body>
-    <div id="searchform">
-        <div id="searchform_day">
-            <input type="radio" id="search_day_0" name="search_day" value="2" checked>
-            <label for="search_day_0">2day</label>
-            <input type="radio" id="search_day_1" name="search_day" value="3">
-            <label for="search_day_1">3day</label>
-            <input type="radio" id="search_day_2" name="search_day" value="7">
-            <label for="search_day_2">1week</label>
-        </div>
-        <div id="searchform_target">
-            <input type="radio" id="search_target_0" name="search_target" value="family" checked>
-            <label for="search_target_0">family</label>
-            <input type="radio" id="search_target_1" name="search_target" value="couple">
-            <label for="search_target_1">couple</label>
-            <input type="radio" id="search_target_2" name="search_target" value="young people">
-            <label for="search_target_2">young people</label>
-            <input type="radio" id="search_target_2" name="search_target" value="old people">
-            <label for="search_target_2">old people</label>
-        </div>
-        <div id="searchform_budget">
-            <label>minimum budget</label>
-            <input type="number" name="number1" min="0" id="min_budget" required>
-            <br>
-            <label>maxmum budget</label>
-            <input type="number" name="number2" min="0" id="max_budget" required>
-        </div>
-        <div id="searchform_tag">
-            <ol id="searchTagList">
-                <li><input type="checkbox" name="searchtag" value="kyoto" data-tagname="a">Kyoto</li>
-                <li><input type="checkbox" name="searchtag" value="aichi" data-tagname="b">Aichi</li>
-                <li><input type="checkbox" name="searchtag" value="osaka" data-tagname="c">Osaka</li>
-            </ol>
-        </div>
-        <input type="button" id="debugbtn" value="search">
+  <div id="searchform">
+    <div id="searchform_day">
+      <input type="radio" id="search_day_0" name="search_day" value="2" checked>
+      <label for="search_day_0">2day</label>
+      <input type="radio" id="search_day_1" name="search_day" value="3">
+      <label for="search_day_1">3day</label>
+      <input type="radio" id="search_day_2" name="search_day" value="7">
+      <label for="search_day_2">1week</label>
     </div>
+    <div id="searchform_target">
+      <input type="radio" id="search_target_0" name="search_target" value="family" checked>
+      <label for="search_target_0">family</label>
+      <input type="radio" id="search_target_1" name="search_target" value="couple">
+      <label for="search_target_1">couple</label>
+      <input type="radio" id="search_target_2" name="search_target" value="young people">
+      <label for="search_target_2">young people</label>
+      <input type="radio" id="search_target_2" name="search_target" value="old people">
+      <label for="search_target_2">old people</label>
+    </div>
+    <div id="searchform_budget">
+      <label>minimum budget</label>
+      <input type="number" name="number1" min="0" id="min_budget" required>
+      <br>
+      <label>maxmum budget</label>
+      <input type="number" name="number2" min="0" id="max_budget" required>
+    </div>
+    <div id="searchform_tag">
+      <ol id="searchTagList">
+        <li><input type="checkbox" name="searchtag" value="kyoto" data-tagname="a">Kyoto</li>
+        <li><input type="checkbox" name="searchtag" value="aichi" data-tagname="b">Aichi</li>
+        <li><input type="checkbox" name="searchtag" value="osaka" data-tagname="c">Osaka</li>
+      </ol>
+    </div>
+    <input type="button" id="debugbtn" value="search">
+  </div>
 
-    <div id="courses">
-        <ul id="courseList">
-            <li hidden>
-                <div id="courseId" class="course">
-                    <ul>
-                        <li> <label class="course_name" name="name">aaa</label></li>
-                        <li> <label class="course_day" name="day">1day</label></li>
-                        <li> <label class="course_target" name="target">family oldpeople</label></li>
-                        <li> <label class="course_money" name="money">100euro</li>
-                    </ul>
-                    <img class="course_image" src="tmpUIFile/Heart.png" alt="imageNotFound">
-                    <div class="course_content" id="courseID-content">
-                        <ul>
-                            <li>tag1</li>
-                            <li>tag2</li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
+  <div id="courses">
+    <ul id="courseList">
+      <div id="courseId" class="course">
+        <ul>
+          <li> <label class="course_name" name="name">aaa</label></li>
+          <li> <label class="course_day" name="day">1day</label></li>
+          <li> <label class="course_target" name="target">family oldpeople</label></li>
+          <li> <label class="course_money" name="money">100euro</li>
         </ul>
-    </div>
+        <img class="course_image" src="tmpUIFile/Heart.png" alt="imageNotFound">
+        <div class="course_content" id="courseID-content">
+          <ul>
+            <li>tag1</li>
+            <li>tag2</li>
+          </ul>
+        </div>
+      </div>
+    </ul>
+  </div>
 </body>
 
 </html>
