@@ -110,7 +110,7 @@ function makeCourseNesting(course) {
 
     $("<img>", {
         class: "course_image",
-        src: "tmpUIFile/Heart.png",
+        src: course.pathToImage,
         alt: "imageNotFound"
     }).appendTo(nesting);
 
