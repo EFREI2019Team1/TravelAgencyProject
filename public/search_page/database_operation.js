@@ -126,9 +126,9 @@ function makeCourseNesting(course) {
 
     return nesting;
 }
+
 //コースの要素をhtmlに挿入
 function addCourseToHTML(course) {
-    console.log("aaa");
     let li = $("<li>").append(makeCourseNesting(course));
     $("#courseList").append(li);
 }
