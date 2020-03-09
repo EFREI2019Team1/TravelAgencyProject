@@ -1,7 +1,7 @@
 'use strict';
 $(function () {
     let courses = new Array();
-    let course1 = new Course("course1", 2, "family", "tmpUIFile/Heart.png", null, 10000, ["kyoto", "hoge2", "hoge3"]);
+    let course1 = new Course("course1", 2, "family", "UI/course01.jpg", null, 10000, ["kyoto", "hoge2", "hoge3"]);
     let course2 = new Course("course2", 2, "family", "tmpUIFile/Heart.png", null, 13000, ["normal", "aichi", "hege1"]);
     let course3 = new Course("course3", 7, "old", "tmpUIFile/Heart.png", null, 15000, ["hogeHoge", "unti", "kfa"]);
     courses.push(course1);
