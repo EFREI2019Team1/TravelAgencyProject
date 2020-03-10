@@ -81,7 +81,9 @@ $(function () {
         })
 
         displayCourseReset();
-
+        if(matchedCourse.length === 0){
+            alert("検索結果:0");
+        }
         matchedCourse.forEach(course => {
             addCourseToHTML(course);
         })
