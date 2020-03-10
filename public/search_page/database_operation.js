@@ -1,26 +1,90 @@
 'use strict';
+var TARGET = {
+    FAMILY: 0,
+    COUPLE: 1,
+    YOUNG: 2,
+    ADULT: 3
+};
+
+var CONTENT = {
+    WORLD_HERITAGE: 0,
+    SHOPPING: 1,
+    IVENT: 2,
+    FASHION: 3,
+    MUSEUM: 4,
+    SIMBOL: 5,
+    TEA_TIME: 6,
+    PARK: 7,
+    SHOW: 8,
+    HISTORIC: 9,
+    INSTAGRAM: 10,
+    FILMING_LOCATION: 11
+};
+
+function equalsStr(string1, string2) {
+    return string1.toLowerCase() == string2.toLowerCase();
+}
+
+function getKeyFromValue(data, value) {
+    return Object.keys(data).filter(key => {
+        return data[key] == value
+    })[0];
+}
+
 $(function () {
     let courses = new Array();
-    let course1 = new Course("course1", 2, "family", "UI/course01.jpg", null, 10000, ["kyoto", "hoge2", "hoge3"]);
-    let course2 = new Course("course2", 2, "family", "tmpUIFile/Heart.png", null, 13000, ["normal", "aichi", "hege1"]);
-    let course3 = new Course("course3", 7, "old", "tmpUIFile/Heart.png", null, 15000, ["hogeHoge", "unti", "kfa"]);
+    let course1 = new Course("コッツウォルズ地方とロンドン", 7, TARGET.ADULT, "UI/course01.jpg", null, 289900, [CONTENT.WORLD_HERITAGE, CONTENT.MUSEUM, CONTENT.SIMBOL]);
+    let course2 = new Course("最低価格！1weekぶらり旅", 7, TARGET.YOUNG, "UI/course02.jpg", null, 30000, [CONTENT.SHOPPING, CONTENT.IVENT, CONTENT.FASHION, CONTENT.TEA_TIME, CONTENT.INSTAGRAM]);
+    let course3 = new Course("ロンドン観光、一週間の旅", 7, TARGET.YOUNG, "UI/course03.jpg", null, 100000, [CONTENT.SHOPPING, CONTENT.MUSEUM, CONTENT.SIMBOL, CONTENT.TEA_TIME, CONTENT.INSTAGRAM]);
+    let course4 = new Course("ロンドン建築巡り！", 2, TARGET.COUPLE, "UI/course04.jpg", null, 20000, [CONTENT.WORLD_HERITAGE, CONTENT.SIMBOL, CONTENT.HISTORIC, CONTENT.INSTAGRAM]);
+    let course5 = new Course("最低価格！3daysぶらり旅", 3, TARGET.YOUNG, "UI/course05.jpg", null, 10000, [CONTENT.SHOPPING, CONTENT.IVENT, CONTENT.FASHION, CONTENT.TEA_TIME, CONTENT.INSTAGRAM]);
+    let course6 = new Course("最低価格！2daysぶらり旅", 2, TARGET.YOUNG, "UI/course06.jpg", null, 5000, [CONTENT.SHOPPING, CONTENT.IVENT, CONTENT.FASHION, CONTENT.TEA_TIME, CONTENT.INSTAGRAM]);
+    let course7 = new Course("ロンドン名所巡り", 2, TARGET.YOUNG, "UI/course07.jpg", null, 10000, [CONTENT.WORLD_HERITAGE, CONTENT.SIMBOL, CONTENT.PARK, CONTENT.HISTORIC]);
+    let course8 = new Course("街歩きとミュージカル鑑賞", 2, TARGET.FAMILY, "UI/course08.jpg", null, 15000, [CONTENT.SHOPPING, CONTENT.SHOW, CONTENT.HISTORIC]);
+    let course9 = new Course("クルーズ&バス", 2, TARGET.ADULT, "UI/course09.jpg", null, 15000, [CONTENT.WORLD_HERITAGE, CONTENT.SHOPPING, CONTENT.SIMBOL, CONTENT.PARK, CONTENT.HISTORIC]);
+    let course10 = new Course("ハリーポッターとシャーロックホームズ/名作のロケ地巡り", 5, TARGET.FAMILY, "UI/course10.jpg", null, 25000, [CONTENT.SHOW, CONTENT.FILMING_LOCATION]);
+    let course11 = new Course("ファミリーツアー", 7, TARGET.FAMILY, "UI/course11.jpg", null, 270000, [CONTENT.SHOPPING, CONTENT.PARK, CONTENT.HISTORIC, CONTENT.INSTAGRAM]);
+    let course12 = new Course("3days for family", 3, TARGET.FAMILY, "UI/course12.jpg", null, 100000, [CONTENT.SHOPPING, CONTENT.PARK, CONTENT.FILMING_LOCATION]);
+    let course13 = new Course("2人でまったり絶景巡り", 2, TARGET.COUPLE, "UI/course13.jpg", null, 20000, [CONTENT.SIMBOL, CONTENT.INSTAGRAM]);
+    let course14 = new Course("3days for couple", 3, TARGET.COUPLE, "UI/course14.jpg", null, 100000, [CONTENT.WORLD_HERITAGE, CONTENT.HISTORIC, CONTENT.FILMING_LOCATION]);
+    let course15 = new Course("まったり博物館・美術館巡り", 7, TARGET.ADULT, "UI/course15.jpg", null, 70000, [CONTENT.WORLD_HERITAGE, CONTENT.MUSEUM, CONTENT.SIMBOL, CONTENT.HISTORIC]);
+    let course16 = new Course("3 days for adults(優雅)", 3, TARGET.ADULT, "UI/course16.jpg", null, 100000, [CONTENT.WORLD_HERITAGE, CONTENT.TEA_TIME, CONTENT.SHOW, CONTENT.HISTORIC]);
+    let course17 = new Course("shopping and theatre", 2, TARGET.FAMILY, "UI/course17.jpg", null, 15000, [CONTENT.SHOPPING, CONTENT.FASHION, CONTENT.SHOW]);
+    let course18 = new Course("ロンドンのおすすめ観光スポット15選！", 3, TARGET.COUPLE, "UI/course18.jpg", null, 20000, [CONTENT.SIMBOL, CONTENT.HISTORIC, CONTENT.INSTAGRAM, CONTENT.FILMING_LOCATION]);
+    let course19 = new Course("3 days with musical", 3, TARGET.FAMILY, "UI/course19.jpg", null, 100000, [CONTENT.SHOPPING, CONTENT.MUSEUM, CONTENT.SHOW]);
     courses.push(course1);
     courses.push(course2);
     courses.push(course3);
-    courses.forEach(course => {
-        addCourseToHTML(course);
-    })
-    let bool = false;
+    courses.push(course4);
+    courses.push(course5);
+    courses.push(course6);
+    courses.push(course7);
+    courses.push(course8);
+    courses.push(course9);
+    courses.push(course10);
+    courses.push(course11);
+    courses.push(course12);
+    courses.push(course13);
+    courses.push(course14);
+    courses.push(course15);
+    courses.push(course16);
+    courses.push(course17);
+    courses.push(course18);
+    courses.push(course19);
+    // console.log(courses);
+
     $("#search_button").click(() => {
-        if(!bool){
-            location.href = "search_page/page1.html"
-        }
         let matchedCourse = search();
-        let message = "Search result matched course is "+matchedCourse.length+"\n";
-        Object.keys(matchedCourse).forEach(function(course){
+        let message = "Search result matched course is " + matchedCourse.length + "\n";
+        Object.keys(matchedCourse).forEach(function (course) {
             console.log(matchedCourse[course].name);
         })
-        alert(message);
+
+        displayCourseReset();
+
+        matchedCourse.forEach(course => {
+            addCourseToHTML(course);
+        })
     })
 })
 
@@ -105,7 +169,7 @@ function makeCourseNesting(course) {
 
     courseinfo_ul.append($makeLabelList("course_name", "name", course.name));
     courseinfo_ul.append($makeLabelList("course_day", "day", course.day + "day"));
-    courseinfo_ul.append($makeLabelList("course_target", "target", course.target));
+    courseinfo_ul.append($makeLabelList("course_target", "target", getKeyFromValue(TARGET, course.target)));
     courseinfo_ul.append($($makeLabelList("course_money", "money", course.moneyLimit + "euro")));
 
     $("<img>", {
@@ -119,10 +183,19 @@ function makeCourseNesting(course) {
         id: course.id + "-content"
     }).html(course.mainContent).appendTo(nesting);
 
+    // console.log(course.contentTag);
     let courseTags_ul = $("<ul>").appendTo(nesting);
-    course.contentTag.forEach(tag => {
-        $("<li>").text(tag).appendTo(courseTags_ul);
+    /*
+    Object.key(course.contentTag).forEach(tag => {
+        console.log(tag);
+        // console.log(getKeyFromValue(CONTENT, tag));
+        // $('<li>').text(getKeyFromValue(CONTENT, tag)).appendTo(courseTags_ul);
     })
+    */
+    course.contentTag.forEach(tag => {
+        $('<li>').text(getKeyFromValue(CONTENT, tag)).appendTo(courseTags_ul);
+    })
+
 
     return nesting;
 }
@@ -131,6 +204,17 @@ function makeCourseNesting(course) {
 function addCourseToHTML(course) {
     let li = $("<li>").append(makeCourseNesting(course));
     $("#courseList").append(li);
+}
+
+function addAllCourse(){
+    displayCourseReset();
+    courseList.forEach(course=>{
+        addCourseToHTML(course);
+    })
+}
+
+function displayCourseReset() {
+    $("#courseList").children().remove();
 }
 
 function search() {
@@ -161,10 +245,10 @@ function search() {
                 if (!isMatched) {
                     return false;
                 }
-    
+
                 let onceTagMatched = false;
                 for (let i = 0; i < tags.length; i++) {
-                    for (let k = 0; k <course.contentTag.length; k++) {
+                    for (let k = 0; k < course.contentTag.length; k++) {
                         if (tags[i] == course.contentTag[k]) {
                             onceTagMatched = true;
                             // console.log("tag is matched "+tags[i]+" and "+course.contentTag[k]);
@@ -182,22 +266,18 @@ function search() {
     let target = $("input[name=search_target]:checked").val();
     let minCost = $("#min_budget").val();
     let maxCost = $("#max_budget").val();
-    let cost = [minCost,maxCost];
+    let cost = [minCost, maxCost];
 
     let checkedTags = [];
     let tags = document.getElementsByName('searchtag');
 
-    for(let item of tags){
-        if(item.checked){
+    for (let item of tags) {
+        if (item.checked) {
             checkedTags.push(item.value);
         }
     }
-    
-    // console.log(day);
-    // console.log(target);
-    // console.log(cost);
-    // console.log(checkedTags);
-    return searchCourse(day,target,cost,checkedTags);
+
+    return searchCourse(day, target, cost, checkedTags);
 }
 
 function getUniqueID() {
