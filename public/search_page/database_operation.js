@@ -71,18 +71,20 @@ $(function () {
     courses.push(course17);
     courses.push(course18);
     courses.push(course19);
-    // console.log(courses);
+    addAllCourse();
 
     $("#search_button").click(() => {
         let matchedCourse = search();
+        //debug message 
         let message = "Search result matched course is " + matchedCourse.length + "\n";
         Object.keys(matchedCourse).forEach(function (course) {
             console.log(matchedCourse[course].name);
         })
+        //
 
         displayCourseReset();
         if(matchedCourse.length === 0){
-            alert("検索結果:0");
+            alert("search result : 0");
         }
         matchedCourse.forEach(course => {
             addCourseToHTML(course);
@@ -277,6 +279,12 @@ function search() {
         if (item.checked) {
             checkedTags.push(item.value);
         }
+    }
+
+    if(checkedTags.length === 0){
+        Object.keys(CONTENT).forEach(key=>{
+            checkedTags.push(CONTENT[key]);
+        })
     }
 
     return searchCourse(day, target, cost, checkedTags);
