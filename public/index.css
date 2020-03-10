@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* --- 全体のBOX定義 ---------------------------------------- */
 .box {
   position   : relative;
@@ -19,18 +23,26 @@ ul {
 	padding: 0;
 	overflow: hidden;
 }
-li {
+.menu > ul > li {
 	float: right;
     border-left: 1px solid #bbbbbb;
 }
 li:last-child {
 	border-right: none;
 }
-li a {
+.menu > ul > li > a {
 	display: block;
 	color: white;
 	text-align: center;
-	padding: 15px 50px;
+	padding: 15px 30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.menu > ul > li > div {
+  display: block;
+	color: white;
+	text-align: center;
+	padding: 15px 30px;
     text-decoration: none;
     font-size: 20px;
 }
@@ -45,6 +57,7 @@ li a:hover:not(.active) {
 .menu {
     z-index: 2;
     position: relative;
+    /*height: fit-content;*/
 }
 a {
     text-shadow:0 0 10px #000;
@@ -99,6 +112,28 @@ a {
 .search_button:hover {
     background-color: #000000;
     color: #ffffff;
+}
+
+.box .flagImg {
+  background-size: cover;
+  text-align: center;
+  color: #ffffff;
+  height: 30px;
+}
+h4 {
+  color: #ffffff;
+  text-shadow:0 0 10px #000;
+  text-decoration: none;
+}
+
+.box .jp {
+  background-image: url(./UI/img/japan.gif);
+}
+.box .en {
+  background-image: url(./UI/img/english.gif);
+}
+.box .fr {
+  background-image: url(./UI/img/france.png);
 }
 
 /* --- 背景の指定 ------------------------------------------- */
