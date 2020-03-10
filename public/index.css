@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* --- 全体のBOX定義 ---------------------------------------- */
 .box {
   position   : relative;
@@ -117,7 +121,9 @@ a {
   height: 30px;
 }
 h4 {
+  color: #ffffff;
   text-shadow:0 0 10px #000;
+  text-decoration: none;
 }
 
 .box .jp {
