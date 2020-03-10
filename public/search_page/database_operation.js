@@ -170,7 +170,7 @@ function makeCourseNesting(course) {
     courseinfo_ul.append($makeLabelList("course_name", "name", course.name));
     courseinfo_ul.append($makeLabelList("course_day", "day", course.day + "day"));
     courseinfo_ul.append($makeLabelList("course_target", "target", getKeyFromValue(TARGET, course.target)));
-    courseinfo_ul.append($($makeLabelList("course_money", "money", course.moneyLimit + "euro")));
+    courseinfo_ul.append($($makeLabelList("course_money", "money", course.moneyLimit + "yen")));
 
     $("<img>", {
         class: "course_image",
