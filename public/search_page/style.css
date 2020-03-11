@@ -1,0 +1,31 @@
+#courseList ul li{
+    list-style: none;
+}
+div.course{
+    padding: 5px;
+    margin: 5px;
+    background-color: aqua;
+}
+div.course:hover{
+    background-color: burlywood;
+}
+.course_name{
+    font-size:30px;
+    border-bottom: solid;
+    border-color: darkgray;
+}
+ul.course_day,
+ul.course_target,
+ul.course_money{
+    font-size:20px;
+    display: inline;
+}
+img.course_image{
+    width: 300px;
+    padding-left: 20px;
+}
+.course_content ul li{
+    display: inline;
+    padding-right: 20px;
+}
+

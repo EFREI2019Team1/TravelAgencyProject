@@ -188,7 +188,7 @@ function makeCourseNesting(course) {
     }).html(course.mainContent).appendTo(nesting);
 
     // console.log(course.contentTag);
-    let courseTags_ul = $("<ul>").appendTo(nesting);
+    let courseTags_ul = $("<ul>").appendTo(content);
     /*
     Object.key(course.contentTag).forEach(tag => {
         console.log(tag);
