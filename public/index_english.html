@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+
+  <!-- call jquery frame -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="index.css"></link>
+  <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+  <div class="box">
+    <div class="menu">
+      <ul>
+        <li><div class="flagImg fr"><a href="index_french.html"><h4>Français</h4></a></div></li>
+        <li><div class="flagImg jp"><a href="index_japanese.html"><h4>日本語</h4></a></div></li>
+        <li><div class="flagImg en"><a href="index_english.html"><h4>English</h4></a></div></li>
+        <li><a href="info.html">Air ticket reservation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="character.html">Courses</a></li>
+        <li><a href="home.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="question_form_wrapper">
+      <div class="question_text">
+        <p><a class="question_title">Find your course !</a></p>
+        <form class="question_form" action="#" method="POST">
+          <p><a class="form_title">Days</a><br>
+          <input type="radio" name="date" value="2"><span class="form_factor">2 days</span>
+          <input type="radio" name="date" value="3"><span class="form_factor">3 days</span>
+          <input type="radio" name="date" value="7"><span class="form_factor">7 days</span></p>
+          <br>
+          <p><a class="form_title">Group</a><br>
+          <input type="radio" name="target" value="0"><span class="form_factor">Family</span>
+          <input type="radio" name="target" value="1"><span class="form_factor">Couple</span>
+          <input type="radio" name="target" value="2"><span class="form_factor">Young</span>
+          <input type="radio" name="target" value="3"><span class="form_factor">Adult</span></p>
+          <br>
+          <p><a class="form_title">コンテンツ</a><br>
+          <input type="checkbox" name="content" value="0"><span class="form_factor">World Heritage</span>
+          <input type="checkbox" name="content" value="1"><span class="form_factor">Shopping</span>
+          <input type="checkbox" name="content" value="2"><span class="form_factor">Ivent</span>
+          <input type="checkbox" name="content" value="3"><span class="form_factor">Fashion</span><br>
+          <input type="checkbox" name="content" value="4"><span class="form_factor">Museum</span>
+          <input type="checkbox" name="content" value="5"><span class="form_factor">Simbol</span>
+          <input type="checkbox" name="content" value="6"><span class="form_factor">Tea Time</span>
+          <input type="checkbox" name="content" value="7"><span class="form_factor">Park</span><br>
+          <input type="checkbox" name="content" value="8"><span class="form_factor">Show</span>
+          <input type="checkbox" name="content" value="9"><span class="form_factor">Histric</span>
+          <input type="checkbox" name="content" value="10"><span class="form_factor">Instagram</span>
+          <input type="checkbox" name="content" value="11"><span class="form_factor">Filming Location</span></p>
+        </form>
+        <div class="button_wrapper">
+          <button class=search_button type="button" name="name" value="value" onclick="OnSearchButtonClicked();">Search Course !</button>
+        </div>
+      </div>
+    </div>
+    <div class="bgImg image1"></div>
+    <div class="bgImg image2"></div>
+    <div class="bgImg image3"></div>
+    <div class="bgImg image4"></div>
+    <div class="bgImg image5"></div>
+  </div>
+</body>
+
+</html>

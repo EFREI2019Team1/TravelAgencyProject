@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* --- 全体のBOX定義 ---------------------------------------- */
 .box {
   position   : relative;
@@ -19,18 +23,26 @@ ul {
 	padding: 0;
 	overflow: hidden;
 }
-li {
+.menu > ul > li {
 	float: right;
     border-left: 1px solid #bbbbbb;
 }
 li:last-child {
 	border-right: none;
 }
-li a {
+.menu > ul > li > a {
 	display: block;
 	color: white;
 	text-align: center;
-	padding: 15px 50px;
+	padding: 15px 30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.menu > ul > li > div {
+  display: block;
+	color: white;
+	text-align: center;
+	padding: 15px 30px;
     text-decoration: none;
     font-size: 20px;
 }
@@ -45,9 +57,83 @@ li a:hover:not(.active) {
 .menu {
     z-index: 2;
     position: relative;
+    /*height: fit-content;*/
 }
 a {
     text-shadow:0 0 10px #000;
+}
+
+.question_form_wrapper {
+    margin-top: 80px;
+    margin-left: 100px;
+    padding: 1%;
+    width: fit-content;
+    height: fit-content;
+    background-color: #ffffffc7;
+    position: relative;
+    z-index: 3;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.question_title {
+    color: #000000;
+    text-shadow: none;
+    font-size: 30px;
+    font-weight: 900;
+}
+.button_wrapper {
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 4;
+}
+.search_button {
+    background-color: #ffffff00;
+    opacity: 1;
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border: solid 3px #000000;
+}
+.form_title {
+    font-weight: 600;
+    font-size: 20px;
+    text-shadow: none;
+}
+.form_factor {
+    margin-right : 10px;
+    margin-left: 3px;
+}
+.search_button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.box .flagImg {
+  background-size: cover;
+  text-align: center;
+  color: #ffffff;
+  height: 30px;
+}
+h4 {
+  color: #ffffff;
+  text-shadow:0 0 10px #000;
+  text-decoration: none;
+}
+
+.box .jp {
+  background-image: url(./UI/img/japan.gif);
+}
+.box .en {
+  background-image: url(./UI/img/english.gif);
+}
+.box .fr {
+  background-image: url(./UI/img/france.png);
 }
 
 /* --- 背景の指定 ------------------------------------------- */
