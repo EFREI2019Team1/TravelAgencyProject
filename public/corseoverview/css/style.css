@@ -3,42 +3,70 @@
   padding: 0px;
 }
 
-/* --- メニューバーの定義 ------------------------------------ */
+a {
+  text-decoration: none;
+}
+
+/* --- 繝｡繝九Η繝ｼ繝舌�ｼ縺ｮ螳夂ｾｩ ------------------------------------ */
 ul {
 list-style-type: none;
 margin: 0;
 padding: 0;
 overflow: hidden;
 }
-li {
-float: right;
-  border-left: 1px solid #bbbbbb;
+.menu > ul > li {
+	float: right;
+    border-left: 1px solid #bbbbbb;
 }
 li:last-child {
 border-right: none;
 }
-li a {
-display: block;
-color: white;
-text-align: center;
-padding: 15px 50px;
-  text-decoration: none;
-  font-size: 20px;
+.menu > ul > li > a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 15px 30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.menu > ul > li > div {
+  display: block;
+	color: white;
+	text-align: center;
+	padding: 15px 30px;
+    text-decoration: none;
+    font-size: 20px;
 }
 li a:hover:not(.active) {
 background-color: #a9bce2;
 }
-/*
-.active {
-  background-color: #da3c41;
-}
-*/
 .menu {
   z-index: 2;
   position: relative;
 }
 a {
   text-shadow:0 0 10px #000;
+}
+h4 {
+  color: #ffffff;
+  text-shadow:0 0 10px #000;
+  text-decoration: none;
+}
+
+.flagImg {
+  background-size: cover;
+  text-align: center;
+  color: #ffffff;
+  height: 30px;
+}
+.menu .jp {
+  background-image: url(./images/japan.gif);
+}
+.menu .en {
+  background-image: url(./images/english.gif);
+}
+.menu .fr {
+  background-image: url(./images/france.png);
 }
 
 
