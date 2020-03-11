@@ -107,6 +107,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", Georgia, serif;
   margin: 0 0 30px 0; }
 
+  h3,span{
+    text-align: center;
+    font-size: 60px;
+    color: rgba(114, 114, 114, 0.8);
+    color: rgba(0, 0, 0, 0.8);
+    font-family: "Playfair Display", Georgia, serif;
+    margin: 0 0 30px 0; 
+  }
+
 ::-webkit-selection {
   color: #fcfcfc;
   background: #b7c2c2; }
