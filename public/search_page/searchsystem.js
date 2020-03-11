@@ -51,18 +51,22 @@ function makeCourseNesting(course) {
         alert("JUMP");
     })[0];
 
-    let courseinfo_ul = $("<ul>").appendTo(nesting);
-
-    courseinfo_ul.append($makeLabelList("course_name", "name", course.name));
-    courseinfo_ul.append($makeLabelList("course_day", "day", course.day + "day"));
-    courseinfo_ul.append($makeLabelList("course_target", "target", getKeyFromValue(TARGET, course.target)));
-    courseinfo_ul.append($($makeLabelList("course_money", "money", course.moneyLimit + "yen")));
-
     $("<img>", {
         class: "course_image",
         src: course.pathToImage,
         alt: "imageNotFound"
     }).appendTo(nesting);
+
+    $("<label>", {
+        class: "course_name",
+        name: "name"
+    }).text(course.name).appendTo(nesting);
+
+    let courseinfo_ul = $("<ul>").appendTo(nesting);
+
+    courseinfo_ul.append($makeLabelList("course_day", "day", course.day + "day"));
+    courseinfo_ul.append($makeLabelList("course_target", "target", getKeyFromValue(TARGET, course.target)));
+    courseinfo_ul.append($($makeLabelList("course_money", "money", course.moneyLimit + "yen")));
 
     let content = $("<div>", {
         class: "course_content",
