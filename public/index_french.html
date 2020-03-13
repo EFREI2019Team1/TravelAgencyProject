@@ -8,8 +8,12 @@
 
   <!-- call jquery frame -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
   <link rel="stylesheet" href="index.css"></link>
-  <script type="text/javascript" src="index.js"></script>
+
+  <script type="text/javascript" src="function.js"></script>
+  <script type="text/javascript" src="data.js"></script>
+  <script type="text/javascript" src="title.js"></script>
 </head>
 
 <body>
@@ -28,34 +32,61 @@
     <div class="question_form_wrapper">
       <div class="question_text">
         <p><a class="question_title">Trouver tes courses !</a></p>
-        <form class="question_form" action="#" method="POST">
+        <p class="question_form" action="#" method="POST">
           <p><a class="form_title">Journées</a><br>
-          <input type="radio" name="date" value="2"><span class="form_factor">2 jours</span>
-          <input type="radio" name="date" value="3"><span class="form_factor">3 jours</span>
-          <input type="radio" name="date" value="7"><span class="form_factor">7 jours</span></p>
-          <br>
+            <div id="searchform_day">
+              <input type="radio" id="search_day_0" name="search_day" value="2" checked>
+              <label for="search_day_0">2 jours</label>
+              <input type="radio" id="search_day_1" name="search_day" value="3">
+              <label for="search_day_1">3 jours</label>
+              <input type="radio" id="search_day_3" name="search_day" value="7">
+              <label for="search_day_3">7 jours</label>
+            </div>
+          </p>
           <p><a class="form_title">Groupe</a><br>
-          <input type="radio" name="target" value="0"><span class="form_factor">Famille</span>
-          <input type="radio" name="target" value="1"><span class="form_factor">Couple</span>
-          <input type="radio" name="target" value="2"><span class="form_factor">Jeunesse</span>
-          <input type="radio" name="target" value="3"><span class="form_factor">Adulte</span></p>
-          <br>
+            <div id="searchform_target">
+              <input type="radio" id="search_target_0" name="search_target" value="0" checked>
+              <label for="search_target_0">Famille</label>
+              <input type="radio" id="search_target_1" name="search_target" value="1">
+              <label for="search_target_1">Couple</label>
+              <input type="radio" id="search_target_2" name="search_target" value="2">
+              <label for="search_target_2">Jeunesse</label>
+              <input type="radio" id="search_target_3" name="search_target" value="3">
+              <label for="search_target_3">Adulte</label>
+            </div>
+          </p>
           <p><a class="form_title">Contenu</a><br>
-          <input type="checkbox" name="content" value="0"><span class="form_factor">Patrimoine mondial</span>
-          <input type="checkbox" name="content" value="1"><span class="form_factor">Achats</span>
-          <input type="checkbox" name="content" value="2"><span class="form_factor">Événement</span>
-          <input type="checkbox" name="content" value="3"><span class="form_factor">Mode</span><br>
-          <input type="checkbox" name="content" value="4"><span class="form_factor">Musée</span>
-          <input type="checkbox" name="content" value="5"><span class="form_factor">Marque de symbole</span>
-          <input type="checkbox" name="content" value="6"><span class="form_factor">L'heure du thé</span>
-          <input type="checkbox" name="content" value="7"><span class="form_factor">Parc</span><br>
-          <input type="checkbox" name="content" value="8"><span class="form_factor">Afficher</span>
-          <input type="checkbox" name="content" value="9"><span class="form_factor">Historique</span>
-          <input type="checkbox" name="content" value="10"><span class="form_factor">Instagram</span>
-          <input type="checkbox" name="content" value="11"><span class="form_factor">Chinema emplacement</span></p>
+            <div id="searchform_tag">
+              <input type="checkbox" id="search_tag_0" name="searchtag" value="0">
+              <label for="search_tag_0">Patrimoine mondial</label>
+              <input type="checkbox" id="search_tag_1" name="searchtag" value="1">
+              <label for="search_tag_1">Achats</label>
+              <input type="checkbox" id="search_tag_2" name="searchtag" value="2">
+              <label for="search_tag_2">Événement</label><br>
+              <input type="checkbox" id="search_tag_3" name="searchtag" value="3">
+              <label for="search_tag_3">Mode</label>
+              <input type="checkbox" id="search_tag_4" name="searchtag" value="4">
+              <label for="search_tag_4">Musée</label>
+              <input type="checkbox" id="search_tag_5" name="searchtag" value="5">
+              <label for="search_tag_5">Marque de symbole</label><br>
+              <input type="checkbox" id="search_tag_6" name="searchtag" value="6">
+              <label for="search_tag_6">L'heure du thé</label>
+              <input type="checkbox" id="search_tag_7" name="searchtag" value="7">
+              <label for="search_tag_7">Parc</label>
+              <input type="checkbox" id="search_tag_8" name="searchtag" value="8">
+              <label for="search_tag_8">Afficher</label><br>
+              <input type="checkbox" id="search_tag_9" name="searchtag" value="9">
+              <label for="search_tag_9">Historique</label>
+              <input type="checkbox" id="search_tag_10" name="searchtag" value="10">
+              <label for="search_tag_10">Instagram</label>
+              <input type="checkbox" id="search_tag_11" name="searchtag" value="11">
+              <label for="search_tag_11">Chinema emplacement</label>
+            </div>
+          </p>
+        </p>
         </form>
         <div class="button_wrapper">
-          <button class=search_button type="button" name="name" value="value" onclick="OnSearchButtonClicked();">Cherchez tes courses !</button>
+          <button class=search_button id="search_button" type="button" value="search">コースを検索</button>
         </div>
       </div>
     </div>

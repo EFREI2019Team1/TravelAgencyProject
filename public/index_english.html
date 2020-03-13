@@ -8,8 +8,12 @@
 
   <!-- call jquery frame -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
   <link rel="stylesheet" href="index.css"></link>
-  <script type="text/javascript" src="index.js"></script>
+
+  <script type="text/javascript" src="function.js"></script>
+  <script type="text/javascript" src="data.js"></script>
+  <script type="text/javascript" src="title.js"></script>
 </head>
 
 <body>
@@ -28,34 +32,61 @@
     <div class="question_form_wrapper">
       <div class="question_text">
         <p><a class="question_title">Find your course !</a></p>
-        <form class="question_form" action="#" method="POST">
+        <p class="question_form" action="#" method="POST">
           <p><a class="form_title">Days</a><br>
-          <input type="radio" name="date" value="2"><span class="form_factor">2 days</span>
-          <input type="radio" name="date" value="3"><span class="form_factor">3 days</span>
-          <input type="radio" name="date" value="7"><span class="form_factor">7 days</span></p>
-          <br>
+            <div id="searchform_day">
+              <input type="radio" id="search_day_0" name="search_day" value="2" checked>
+              <label for="search_day_0">2day</label>
+              <input type="radio" id="search_day_1" name="search_day" value="3">
+              <label for="search_day_1">3day</label>
+              <input type="radio" id="search_day_3" name="search_day" value="7">
+              <label for="search_day_3">1week</label>
+            </div>
+          </p>
           <p><a class="form_title">Group</a><br>
-          <input type="radio" name="target" value="0"><span class="form_factor">Family</span>
-          <input type="radio" name="target" value="1"><span class="form_factor">Couple</span>
-          <input type="radio" name="target" value="2"><span class="form_factor">Young</span>
-          <input type="radio" name="target" value="3"><span class="form_factor">Adult</span></p>
-          <br>
+            <div id="searchform_target">
+              <input type="radio" id="search_target_0" name="search_target" value="0" checked>
+              <label for="search_target_0">family</label>
+              <input type="radio" id="search_target_1" name="search_target" value="1">
+              <label for="search_target_1">couple</label>
+              <input type="radio" id="search_target_2" name="search_target" value="2">
+              <label for="search_target_2">young people</label>
+              <input type="radio" id="search_target_3" name="search_target" value="3">
+              <label for="search_target_3">adult people</label>
+            </div>
+          </p>
           <p><a class="form_title">Contents</a><br>
-          <input type="checkbox" name="content" value="0"><span class="form_factor">World Heritage</span>
-          <input type="checkbox" name="content" value="1"><span class="form_factor">Shopping</span>
-          <input type="checkbox" name="content" value="2"><span class="form_factor">Ivent</span>
-          <input type="checkbox" name="content" value="3"><span class="form_factor">Fashion</span><br>
-          <input type="checkbox" name="content" value="4"><span class="form_factor">Museum</span>
-          <input type="checkbox" name="content" value="5"><span class="form_factor">Simbol</span>
-          <input type="checkbox" name="content" value="6"><span class="form_factor">Tea Time</span>
-          <input type="checkbox" name="content" value="7"><span class="form_factor">Park</span><br>
-          <input type="checkbox" name="content" value="8"><span class="form_factor">Show</span>
-          <input type="checkbox" name="content" value="9"><span class="form_factor">Histric</span>
-          <input type="checkbox" name="content" value="10"><span class="form_factor">Instagram</span>
-          <input type="checkbox" name="content" value="11"><span class="form_factor">Filming Location</span></p>
+            <div id="searchform_tag">
+              <input type="checkbox" id="search_tag_0" name="searchtag" value="0">
+              <label for="search_tag_0">World Heritage</label>
+              <input type="checkbox" id="search_tag_1" name="searchtag" value="1">
+              <label for="search_tag_1">Shopping</label>
+              <input type="checkbox" id="search_tag_2" name="searchtag" value="2">
+              <label for="search_tag_2">Ivent</label><br>
+              <input type="checkbox" id="search_tag_3" name="searchtag" value="3">
+              <label for="search_tag_3">Fashion</label>
+              <input type="checkbox" id="search_tag_4" name="searchtag" value="4">
+              <label for="search_tag_4">Museum</label>
+              <input type="checkbox" id="search_tag_5" name="searchtag" value="5">
+              <label for="search_tag_5">Simbol</label><br>
+              <input type="checkbox" id="search_tag_6" name="searchtag" value="6">
+              <label for="search_tag_6">Tea Time</label>
+              <input type="checkbox" id="search_tag_7" name="searchtag" value="7">
+              <label for="search_tag_7">Park</label>
+              <input type="checkbox" id="search_tag_8" name="searchtag" value="8">
+              <label for="search_tag_8">Show</label><br>
+              <input type="checkbox" id="search_tag_9" name="searchtag" value="9">
+              <label for="search_tag_9">Histric</label>
+              <input type="checkbox" id="search_tag_10" name="searchtag" value="10">
+              <label for="search_tag_10">Instagram</label>
+              <input type="checkbox" id="search_tag_11" name="searchtag" value="11">
+              <label for="search_tag_11">Filming Location</label>
+            </div>
+          </p>
+        </p>
         </form>
         <div class="button_wrapper">
-          <button class=search_button type="button" name="name" value="value" onclick="OnSearchButtonClicked();">Search Course !</button>
+          <button class=search_button id="search_button" type="button" value="search">Search Course !</button>
         </div>
       </div>
     </div>
