@@ -9,36 +9,36 @@ a {
 
 /* --- メニューバーの定義 ------------------------------------ */
 ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 .menu > ul > li {
 	float: right;
-    border-left: 1px solid #bbbbbb;
+  border-left: 1px solid #bbbbbb;
 }
 li:last-child {
-border-right: none;
+  border-right: none;
 }
 .menu > ul > li > a {
 	display: block;
 	color: white;
 	text-align: center;
 	padding: 15px 30px;
-    text-decoration: none;
-    font-size: 20px;
+  text-decoration: none;
+  font-size: 20px;
 }
 .menu > ul > li > div {
   display: block;
 	color: white;
 	text-align: center;
 	padding: 15px 30px;
-    text-decoration: none;
-    font-size: 20px;
+  text-decoration: none;
+  font-size: 20px;
 }
 li a:hover:not(.active) {
-background-color: #a9bce2;
+  background-color: #a9bce2;
 }
 .menu {
   z-index: 2;
@@ -57,16 +57,17 @@ h4 {
   background-size: cover;
   text-align: center;
   color: #ffffff;
-  height: 30px;
+  width: 120px;
+  height: 60px;
 }
-.menu .jp {
-  background-image: url(./images/japan.gif);
+.jp {
+  background-image: url(../images/japan.gif);
 }
-.menu .en {
-  background-image: url(./images/english.gif);
+.en {
+  background-image: url(../images/english.gif);
 }
-.menu .fr {
-  background-image: url(./images/france.png);
+.fr {
+  background-image: url(../images/france.png);
 }
 
 
