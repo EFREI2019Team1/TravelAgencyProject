@@ -55,10 +55,11 @@ a {
 }
 
 .box .question_form_wrapper {
-    margin-top: 80px;
-    margin-left: 100px;
+    /*margin-top: 80px;
+    margin-left: 100px;*/
+    text-align: center;
     padding: 1%;
-    width: fit-content;
+    width: 100%;
     height: fit-content;
     background-color: #ffffffc7;
     position: relative;
@@ -175,4 +176,10 @@ a {
 }
 #courses .course_content ul{
     clear: both;
+}
+
+#courseList {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
 }
