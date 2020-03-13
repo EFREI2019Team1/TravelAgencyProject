@@ -1,31 +1,169 @@
-#courseList ul li{
+/* --- メニューバーの定義 ------------------------------------ */
+.box ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.box .menu > ul > li {
+	float: right;
+    border-left: 1px solid #bbbbbb;
+}
+.box li:last-child {
+	border-right: none;
+}
+.box .menu > ul > li > a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 15px 30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.box .menu > ul > li > div {
+  display: block;
+	color: white;
+	text-align: center;
+	padding: 15px 30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.box li a:hover:not(.active) {
+	background-color: #a9bce2;
+}
+/*
+.active {
+    background-color: #da3c41;
+}
+*/
+.box .menu {
+    z-index: 2;
+    position: relative;
+    /*height: fit-content;*/
+}
+.box a {
+    text-shadow:0 0 10px #000;
+}
+
+.box .question_form_wrapper {
+    margin-top: 80px;
+    margin-left: 100px;
+    padding: 1%;
+    width: fit-content;
+    height: fit-content;
+    background-color: #ffffffc7;
+    position: relative;
+    z-index: 3;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.box .question_title {
+    color: #000000;
+    text-shadow: none;
+    font-size: 30px;
+    font-weight: 900;
+}
+.box .button_wrapper {
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 4;
+}
+.box .search_button {
+    background-color: #ffffff00;
+    opacity: 1;
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border: solid 3px #000000;
+}
+.box .form_title {
+    font-weight: 600;
+    font-size: 20px;
+    text-shadow: none;
+}
+.box .form_factor {
+    margin-right : 10px;
+    margin-left: 3px;
+}
+.box .search_button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.box .flagImg {
+  background-size: cover;
+  text-align: center;
+  color: #ffffff;
+  height: 30px;
+}
+.box h4 {
+  color: #ffffff;
+  text-shadow:0 0 10px #000;
+  text-decoration: none;
+}
+
+.box .jp {
+  background-image: url(../UI/img/japan.gif);
+}
+.box .en {
+  background-image: url(../UI/img/english.gif);
+}
+.box .fr {
+  background-image: url(../UI/img/france.png);
+}
+
+/* ---コース一覧のレイアウト */
+
+#courses #courseList{
     list-style: none;
 }
-div.course{
+#courses #courseList > ul li{
+    padding-right: 30px;
+}
+
+#courses div.course{
+    width: 450px;
     padding: 5px;
     margin: 5px;
-    background-color: aqua;
 }
-div.course:hover{
-    background-color: burlywood;
+#courses div.course:hover{
+    background-color:#f0f0f0;
 }
-.course_name{
+#courses div.course ul li{
+    float: left;
+    padding-right: 30px;
+}
+#courses div.course>ul>li{
+    list-style-type: square;
+}
+#courses .course_name{
     font-size:30px;
     border-bottom: solid;
     border-color: darkgray;
-}
-ul.course_day,
-ul.course_target,
-ul.course_money{
-    font-size:20px;
-    display: inline;
-}
-img.course_image{
-    width: 300px;
-    padding-left: 20px;
-}
-.course_content ul li{
-    display: inline;
-    padding-right: 20px;
+    margin-left: 20px;
+    font-family: "Playfair Display", Georgia, serif;
 }
 
+#courses .course_day,
+#courses .course_target,
+#courses .course_money{
+    font-family: "Karla", Arial, sans-serif;
+}
+
+#courses img.course_image{
+    width: 300px;
+    padding-left: 20px;
+    display: block;
+}
+#courses div.course_content{
+    height:70px;
+}
+#courses .course_content ul{
+    clear: both;
+}
