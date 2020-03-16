@@ -1,0 +1,41 @@
+.hidden{
+    display: none;
+}
+
+.user-table{
+    width: 400px;
+    margin: 10px 20px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: rgb(196, 193, 193);
+}
+
+.user-table #userImage{
+    width: 50%;
+    height:auto;
+    border-radius: 50%;
+}
+
+.user-table .user-info{
+    border: 1px dashed #ccc;
+    padding: 5px;
+    margin: 0 10px;
+    display: inline-block;
+    
+    width: 165px;
+    font-size: 20px;
+}
+
+#userstate{
+    background-color: rgb(255, 255, 255) ;
+}
+
+#opennote-button{
+    width:100px;
+    height:30px;
+    background-color: rgb(211, 205, 205);
+}
