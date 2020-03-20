@@ -16,20 +16,21 @@
     <script defer src="/__/firebase/7.9.3/firebase-database.js"></script>
     <script defer src="/__/firebase/7.9.3/firebase-messaging.js"></script>
     <!-- <script defer src="/__/firebase/7.9.3/firebase-storage.js"></script> -->
-    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/7.9.3/firebase-firestore.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
 
     <link rel="stylesheet" href="booking_page.css">
-    </link>
 
-    <!-- <script type="text/javascript" src="function.js"></script> -->
-    <!-- <script type="text/javascript" src="data.js"></script> -->
+    <script type="text/javascript" src="../function.js"></script>
+    <script type="text/javascript" src="../data.js"></script>
     <script type="text/javascript" src="bookingSystem.js"></script>
 </head>
 
 <body>
-    <input type="button" id="book_button" value="book">
+    <input type="button" id="book_button" value="予約">
+    <input type="button" id="delete_button" value="キャンセル">
+    <input type="button" id="zikken" value="実験ボタン">
     <input type="button" id="login" value="login">
     <input type="button" id="logout" value="logout">
     <div class="user-table">
@@ -37,6 +38,9 @@
         <div class="user-info">
             <h4>ユーザー</h4>
             <p id="userstate">Loading...</p>
+            <h4>予約コース</h4>
+            <ul id="bookCourseList">
+            </ul>
         </div>
     </div>
 </body>

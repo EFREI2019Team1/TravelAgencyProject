@@ -30,8 +30,12 @@
     font-size: 20px;
 }
 
-#userstate{
+#userstate,#bookCourseList{
     background-color: rgb(255, 255, 255) ;
+}
+
+#bookCourseList li{
+
 }
 
 #opennote-button{
